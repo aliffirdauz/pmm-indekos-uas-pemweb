@@ -18,14 +18,14 @@ class KostFactory extends Factory
     {
         return [
             'nama' => $this->faker->company,
-            'nama_pemilik' => $this->faker->name,
             'alamat' => $this->faker->address,
             'no_telp' => $this->faker->phoneNumber,
             'deskripsi' => $this->faker->text,
-            'harga' => $this->faker->numberBetween(1, 9),
-            'status' => $this->faker->randomElement(['tersedia', 'terisi']),
-            'tipe' => $this->faker->randomElement(['putra', 'putri', 'campur']),
+            'harga' => $this->faker->numberBetween(500000, 900000),
+            'status' => $this->faker->randomElement(['Tersedia', 'Terisi']),
+            'tipe' => $this->faker->randomElement(['Putra', 'Putri', 'Campur']),
             'foto' => $this->faker->imageUrl,
+            'pemilik_kost_id' => $this->faker->numberBetween(1, 10),
         ];
     }
 }

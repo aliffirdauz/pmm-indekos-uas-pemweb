@@ -9,4 +9,9 @@ class Kost extends Model
 {
     use HasFactory;
     protected $guarded = ['id'];
+
+    public function pemilikKost()
+    {
+        return $this->belongsTo(PemilikKost::class);
+    }
 }
