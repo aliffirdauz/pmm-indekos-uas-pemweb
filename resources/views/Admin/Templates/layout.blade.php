@@ -11342,10 +11342,10 @@
                 </div>
             </div>
             <div class="list-group list-group-flush">
-                <a class="list-group-item list-group-item-action p-3" style="background-color: #F7F5EB" href="/">Dashboard</a>
-                <a class="list-group-item list-group-item-action p-3" style="background-color: #F7F5EB" href="/kost">Data Kost</a>
-                <a class="list-group-item list-group-item-action p-3" style="background-color: #F7F5EB" href="/pemilik-kost">Data Pemilik Kost</a>
-                <a class="list-group-item list-group-item-action p-3" style="background-color: #F7F5EB" href="/user">Data Pengguna</a>
+                <a class="list-group-item list-group-item-action p-3" style="background-color: #A0C3D2" href="/">Dashboard</a>
+                <a class="list-group-item list-group-item-action p-3" style="background-color: #A0C3D2" href="/kost">Data Kost</a>
+                <a class="list-group-item list-group-item-action p-3" style="background-color: #A0C3D2" href="/pemilik-kost">Data Pemilik Kost</a>
+                <a class="list-group-item list-group-item-action p-3" style="background-color: #A0C3D2" href="/user">Data Pengguna</a>
             </div>
         </div>
         <!-- Page content wrapper-->

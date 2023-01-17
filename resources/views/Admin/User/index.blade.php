@@ -1,13 +1,17 @@
 @extends('admin.templates.layout')
 @section('content')
-    <h1>Data Pengguna</h1>
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createModal"><i
-            class="bi bi-plus-lg"></i> Pengguna</button>
+<br />
+    <div style="background-color: #EAE0DA; border-radius: 15px; padding: 10px">
+    <div class="container d-inline-flex p-2 d-flex justify-content-between">
+        <h1>Data Pengguna</h1>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createModal"><i
+                class="bi bi-plus-lg"></i> Pengguna</button>
+    </div>
     <!-- Modal Create -->
     <div class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" id="createModal" tabindex="-1"
         aria-labelledby="createModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-            <div class="modal-content">
+            <div class="modal-content" style="background-color: #EAE0DA;">
                 <div class="modal-header">
                     <h1 class="modal-title fs-5" id="createModalLabel">Tambah Pengguna</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -94,9 +98,9 @@
             </div>
         </div>
     </div>
+    </div>
     <br />
-    <br />
-
+    <div style="background-color: #EAE0DA; border-radius:15px; padding: 20px;">
     <table id="myTable" class="table table-striped table-hover border table-bordered">
         <thead>
             <tr>
@@ -137,7 +141,7 @@
                             data-bs-backdrop="static" data-bs-keyboard="false" id="deleteModal{{ $user->id }}"
                             tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered">
-                                <div class="modal-content">
+                                <div class="modal-content" style="background-color: #EAE0DA;">
                                     <div class="modal-header">
                                         <h5 class="modal-title" id="deleteModalLabel">Delete Pengguna</h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
@@ -171,7 +175,7 @@
                             data-bs-backdrop="static" data-bs-keyboard="false" id="editModal{{ $user->id }}"
                             tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-                                <div class="modal-content">
+                                <div class="modal-content" style="background-color: #EAE0DA;">
                                     <div class="modal-header">
                                         <h1 class="modal-title fs-5" id="editModalLabel">Edit Pengguna</h1>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
@@ -321,4 +325,5 @@
             @endforeach
         </tbody>
     </table>
+    </div>
 @endsection

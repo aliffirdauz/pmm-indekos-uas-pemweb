@@ -18,7 +18,7 @@ class KostController extends Controller
     {
         $validatedData = $request->validate([
             'nama' => 'required',
-            'nama_pemilik' => 'required',
+            'pemilik_kost_id' => 'required',
             'alamat' => 'required',
             'no_telp' => 'required',
             'deskripsi' => 'required',
