@@ -213,4 +213,5 @@
             </tbody>
         </table>
     </div>
+    <br />
 @endsection

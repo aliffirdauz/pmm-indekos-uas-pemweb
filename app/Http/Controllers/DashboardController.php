@@ -11,7 +11,7 @@ class DashboardController extends Controller
 {
     public function index()
     {   
-        $kosts = Kost::all();
+        $kosts = Kost::paginate(4)->withQueryString();
         $pemilik = PemilikKost::all();
         $user = User::all();
         return view('admin.dashboard.index', compact('kosts', 'pemilik', 'user'));

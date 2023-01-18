@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Kost;
+use App\Models\PemilikKost;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class KostController extends Controller
@@ -11,7 +12,8 @@ class KostController extends Controller
     public function index()
     {
         $kosts = Kost::all();
-        return view('admin.kost.index', compact('kosts'));
+        $pemilik = PemilikKost::all();
+        return view('admin.kost.index', compact('kosts','pemilik'));
     }
 
     public function store(Request $request)
@@ -50,7 +52,7 @@ class KostController extends Controller
         $old_foto = Kost::all()->where('id', $id)->first()->foto;
         $validatedData = $request->validate([
             'nama' => 'required',
-            'nama_pemilik' => 'required',
+            'pemilik_kost_id' => 'required',
             'alamat' => 'required',
             'no_telp' => 'required',
             'deskripsi' => 'required',

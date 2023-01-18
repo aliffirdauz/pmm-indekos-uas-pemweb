@@ -11332,26 +11332,26 @@
     <title>INDEKOS - ADMIN</title>
 </head>
 
-<body>
+<body style="background-color: #EAE0DA">
     <div class="d-flex" id="wrapper">
         <!-- Sidebar-->
-        <div class="border-end" id="sidebar-wrapper" style="background-color: #A0C3D2">
+        <div class="border-end" id="sidebar-wrapper" style="background-color: #EAE0DA">
             <div class="sidebar-heading border-bottom">
                 <div class="d-flex align-items-center justify-content-center">
                     <div class="fs-4 fw-bold">INDEKOS</div>
                 </div>
             </div>
             <div class="list-group list-group-flush">
-                <a class="list-group-item list-group-item-action p-3" style="background-color: #A0C3D2" href="/">Dashboard</a>
-                <a class="list-group-item list-group-item-action p-3" style="background-color: #A0C3D2" href="/kost">Data Kost</a>
-                <a class="list-group-item list-group-item-action p-3" style="background-color: #A0C3D2" href="/pemilik-kost">Data Pemilik Kost</a>
-                <a class="list-group-item list-group-item-action p-3" style="background-color: #A0C3D2" href="/user">Data Pengguna</a>
+                <a class="list-group-item list-group-item-action p-3" style="background-color: #EAE0DA" href="/">Dashboard</a>
+                <a class="list-group-item list-group-item-action p-3" style="background-color: #EAE0DA" href="/kost">Data Kost</a>
+                <a class="list-group-item list-group-item-action p-3" style="background-color: #EAE0DA" href="/pemilik-kost">Data Pemilik Kost</a>
+                <a class="list-group-item list-group-item-action p-3" style="background-color: #EAE0DA" href="/user">Data Pengguna</a>
             </div>
         </div>
         <!-- Page content wrapper-->
         <div id="page-content-wrapper">
             <!-- Top navigation-->
-            <nav class="navbar navbar-expand-lg border-bottom" style="background-color: #A0C3D2">
+            <nav class="navbar navbar-expand-lg border-bottom" style="background-color: #EAE0DA">
                 <div class="container-fluid" >
                     <button class="btn btn-dark" id="sidebarToggle"><i class="bi bi-list"></i></button>
                 </div>

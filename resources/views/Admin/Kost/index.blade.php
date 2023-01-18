@@ -82,7 +82,7 @@
         </div>
     </div>
     <br />
-    <div style="background-color: #EAE0DA; border-radius:15px; padding: 20px">
+    <div style="background-color: #EAE0DA; border-radius:15px; padding: 20px;">
         <table id="myTable" class="table table-striped table-hover border table-bordered">
             <thead>
                 <tr>
@@ -104,14 +104,15 @@
                     <tr>
                         <td>{{ $loop->iteration }}</td>
                         <td>{{ $kost->nama }}</td>
-                        <td>{{ $kost->pemilik_kost_id }}</td>
+                        <td>{{ $kost->pemilikkost->nama }}</td>
                         <td>{{ $kost->alamat }}</td>
                         <td>{{ $kost->no_telp }}</td>
                         <td>{{ $kost->deskripsi }}</td>
                         <td>Rp.{{ $kost->harga }}</td>
                         <td>{{ $kost->status }}</td>
                         <td>{{ $kost->tipe }}</td>
-                        <td><img src="{{ asset('foto_kost/' . $kost->foto) }}" alt="" width="100px"></td>
+                        {{-- <td><img src="{{ asset('foto_kost/' . $kost->foto) }}" alt="" width="100px"></td> --}}
+                        <td><img src="https://source.unsplash.com/500x400?house" alt="" width="100px"></td>
                         <td>
                             {{-- delete button --}}
                             <button type="submit" class="btn btn-danger" data-bs-toggle="modal"
@@ -188,8 +189,16 @@
                                                         class="form-label
                                                         @error('pemilik_kost_id') is-invalid @enderror">Nama
                                                         Pemilik</label>
-                                                    <input type="text" class="form-control" id="pemilik_kost_id"
-                                                        name="pemilik_kost_id" value="{{ $kost->pemilik_kost_id }}">
+                                                    <select
+                                                        class="form-select @error('pemilik_kost_id') is-invalid @enderror"
+                                                        id="pemilik_kost_id" name="pemilik_kost_id">
+                                                        <option selected disabled>Pilih Pemilik</option>
+                                                        @foreach ($pemilik as $pem)
+                                                            <option value="{{ $pem->id }}"
+                                                                {{ $pem->id == $kost->pemilik_kost_id ? 'selected' : '' }}>
+                                                                {{ $pem->nama }}</option>
+                                                        @endforeach
+                                                    </select>
                                                     @error('pemilik_kost_id')
                                                         <div class="invalid-feedback">
                                                             {{ $message }}
@@ -301,4 +310,5 @@
             </tbody>
         </table>
     </div>
+    <br />
 @endsection

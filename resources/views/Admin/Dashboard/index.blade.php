@@ -37,7 +37,8 @@
             @foreach ($kosts as $kost)
                 <div class="col">
                     <div class="card border-dark mb-3" style="background-color: #F7F5EB; width:18rem;">
-                        <img src="{{ $kost->foto }}" class="card-img-top" alt="Foto Kost">
+                        {{-- <img src="{{ $kost->foto }}" class="card-img-top" alt="Foto Kost"> --}}
+                        <img src="https://source.unsplash.com/500x400?house" class="card-img-top" alt="Foto Kost">
                         <div class="card-body">
                             <h5 class="card-title"
                                 style="width: 250px;
@@ -54,7 +55,7 @@
                             </p>
                         </div>
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item"><i class="bi bi-person-square"></i> {{ $kost->pemilik_kost_id }}
+                            <li class="list-group-item"><i class="bi bi-person-square"></i> {{ $kost->pemilikkost->nama }}
                             </li>
                             <li class="list-group-item"><i class="bi bi-telephone"></i> {{ $kost->no_telp }}</li>
                             <li class="list-group-item"><i class="bi bi-tag"></i> Rp.{{ $kost->harga }} / Bulan</li>
@@ -63,20 +64,7 @@
                 </div>
             @endforeach
         </div>
+        {{$kosts->links()}}
     </div>
-    <nav aria-label="...">
-        <ul class="pagination justify-content-center">
-            <li class="page-item">
-                <a class="page-link">Sebelumnya</a>
-            </li>
-            <li class="page-item"><a class="page-link" href="#">1</a></li>
-            <li class="page-item" aria-current="page">
-                <a class="page-link" href="#">2</a>
-            </li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item">
-                <a class="page-link" href="#">Selanjutnya</a>
-            </li>
-        </ul>
-    </nav>
+    <br/>
 @endsection
